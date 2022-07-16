@@ -19,7 +19,7 @@ int r_gcd(int a, int b) { //recursive euclid algorithm
 	}
 }
 
-int i_gcd(int a, int b) {
+int i_gcd(int a, int b) { //iterative 
 
 	int max = (a > b) ? a : b;
 	int min = (a < b) ? a : b;
@@ -31,10 +31,4 @@ int i_gcd(int a, int b) {
 	}
 	return max;
 }
-
-int main() {
-	int a, b;
-	scanf("%d %d", &a, &b);
-	printf("%d", i_gcd(a, b));
-	return 0;
-}
+	
