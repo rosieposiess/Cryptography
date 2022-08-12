@@ -21,6 +21,10 @@ int main() {
 	printf("Ciphertext : %s\n", ct);
 	caesarDecrypt(ct, pt, key);
 	printf("Plaintext : %s\n", pt);
+	
+	free(ct);
+	free(pt);
+	
 	return 0;
 }
 
