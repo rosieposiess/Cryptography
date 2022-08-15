@@ -37,6 +37,7 @@ void caesarEncrypt(char a[], char* ct, int key) {
 			a[i]=tolower(a[i]);
 			ct[i] = (a[i] + key - 97) % 26 + 97;
 			ct[i]=toupper(ct[i]);
+			a[i]=toupper(a[i]);
 		}
 
 		else if (!isalpha(a[i])) {
@@ -66,6 +67,7 @@ void caesarDecrypt(char c[], char*pt, int key) {
 			c[i]=tolower(c[i]);
 			pt[i] = (c[i] + key - 97) % 26 + 97;
 			pt[i]=toupper(pt[i]);
+			c[i] = toupper(c[i]); //caesarDecrypt 함수를 한 번 돌리면 상관이없는데 만약 이 함수를 여러번 돌린다면 문제가 생김
 		}
 
 		else if (!isalpha(c[i])) {
